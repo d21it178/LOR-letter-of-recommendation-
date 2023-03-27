@@ -1,0 +1,114 @@
+.no {
+
+
+
+
+    top: 140px;
+    bottom: 200px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 82px;
+
+    padding-bottom: 50px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+}
+
+.no .no1 {
+    background-color: #0065B3;
+    height: 500px;
+    color: #FFFFFF;
+
+}
+
+.no .no1 .Vector1 {
+    position: absolute;
+    left: 10%;
+    right: 0%;
+    top: 20%;
+    bottom: 12.5%;
+}
+
+.no .no1 .Vector2 {
+    position: absolute;
+    left: 35%;
+    right: 0%;
+    top: 20%;
+    bottom: 12.5%;
+}
+
+.no .no1 .Vector3 {
+    position: absolute;
+    left: 60%;
+    right: 0%;
+    top: 20%;
+    ;
+    bottom: 12.5%;
+}
+
+.no .no1 .Vector4 {
+    position: absolute;
+    left: 85%;
+    right: 0%;
+    top: 20%;
+
+    bottom: 12.5%;
+}
+
+.who {
+    text-align: center;
+    top: 1250px;
+}
+
+/* .latest{
+    text-align: center;
+    top: 
+    2320px;
+   
+    
+} */
+
+
+.latest .card1{
+    position: absolute;
+width: 723px;
+height: 681px;
+left: 47px;
+top: 220px;
+
+background: #FFFFFF;
+box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.latest .text{
+    text-align: right  center ;
+    
+}
+
+
+.latest .as{
+    top: 25px;
+}
+
+
+.latest .a1t{
+    position: absolute;
+width: 186px;
+height: 16px;
+left: 95px;
+top: 215px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+
+color: #0065B3;
+}

@@ -1,0 +1,27 @@
+.footer{
+    position: absolute;
+width: 1440px;
+height: 420px;
+left: 0px;
+top: 3800px;
+
+background: #0065B3;
+}
+
+.footer .copyrights{
+    position: absolute;
+    width: 305px;
+    height: 22px;
+    left: 550px;
+    top:380px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    
+   
+    
+    color: #FFFFFF;}
