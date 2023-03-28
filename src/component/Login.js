@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-
+import { LinkContainer } from 'react-router-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Fade from 'react-reveal/Fade';
@@ -14,7 +14,7 @@ export default function Login() {
         <Card style={{ height: '20rem', width: '30rem', bottom: '420px', left: '59%' }}>
 
           <Card.Body>
-            <Card.Title style={{ color: 'black' , left: '10px'}}>Login</Card.Title>
+            <Card.Title style={{ color: 'black', left: '10px' }}>Login</Card.Title>
             <Form>
               <Form.Group className="" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -31,10 +31,11 @@ export default function Login() {
               </Button>
             </Form>
             <h6 style={{ color: 'black' }}>Don't have account?
-          
-              <Card.Link href='Signup' element={<Signup />} > Signup</Card.Link>
-                
-              
+
+              <LinkContainer to="/Signup">
+                <Card.Link href='Signup' element={<Signup />} > Signup</Card.Link>
+              </LinkContainer>
+
             </h6>
           </Card.Body>
         </Card>

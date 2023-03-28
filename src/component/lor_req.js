@@ -3,26 +3,37 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
+import { LinkContainer } from 'react-router-bootstrap';
+import Container from 'react-bootstrap/Container';
+
 
 export default function lor_req() {
     return (
         <div >
-            <Card style={{bottom: '420px',width:'500px', alignItems :'center'}}>
-                <Card.Header>
-                    <Nav variant="pills" defaultActiveKey="#first">
-                        <Nav.Item>
-                            <Nav.Link href="#first">Personal Infomation</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#link">University details</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link href="#disabled">
-                                Falcuty details
-                            </Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                </Card.Header>
+            <Card style={{ bottom: '420px', width: '500px', alignItems: 'center' }}>
+                {/* <Card.Header>
+                    <Container>
+                        <Nav variant="pills" defaultActiveKey="#Personal_Infomation">
+
+                            <LinkContainer to="/Request">
+                                <Nav.Item>
+                                    <Nav.Link href="#Personal_Infomation">Personal Infomation</Nav.Link>
+                                </Nav.Item>
+                            </LinkContainer>
+
+
+                            <Nav.Item>
+                                <Nav.Link href="#University_details">University details</Nav.Link>
+                            </Nav.Item>
+
+
+                            <Nav.Item>
+                                <Nav.Link href="#Faculty_details">Faculty details</Nav.Link>
+                            </Nav.Item>
+
+                        </Nav>
+                    </Container>
+                </Card.Header> */}
                 <Form>
                     <Form.Group className="" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
@@ -33,6 +44,7 @@ export default function lor_req() {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
+
 
                     <Button className="mb-1" variant="primary" type="submit">
                         Submit

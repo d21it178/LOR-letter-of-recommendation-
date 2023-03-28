@@ -13,6 +13,7 @@ import Upload from './pages/Upload';
 import Signup from './pages/Signup';
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -23,8 +24,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Request" element={<Request />} />
         <Route path="/Upload" element={<Upload />} />
-        
         <Route path="/Signup" element={<Signup />} />
+        
       </Routes>
       
     </BrowserRouter>
