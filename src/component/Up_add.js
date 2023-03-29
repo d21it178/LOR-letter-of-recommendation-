@@ -1,18 +1,12 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
-import { LinkContainer } from 'react-router-bootstrap';
-import Container from 'react-bootstrap/Container';
-import { Fade } from 'react-reveal';
 
-
-export default function lor_req() {
-    return (
-        <div >
-            
-            <Card style={{ bottom: '400px', width: '500px', alignItems: 'center' }}>
+export default function Up_add() {
+  return (
+    <div>
+         <Card style={{ bottom: '400px', width: '500px', alignItems: 'center' }}>
                 {/* <Card.Header>
                     <Container>
                         <Nav variant="pills" defaultActiveKey="#Personal_Infomation">
@@ -53,7 +47,6 @@ export default function lor_req() {
                 </Form>
 
             </Card>
-           
-        </div>
-    )
+    </div>
+  )
 }
