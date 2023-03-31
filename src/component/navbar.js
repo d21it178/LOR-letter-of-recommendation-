@@ -13,13 +13,13 @@ import { LinkContainer } from 'react-router-bootstrap';
 export default function navigationbar() {
   return (
     <div className='nav'>
-      <Navbar className=" fixed-top" collapseOnSelect expand="lg" bg="rgb=25 78 85" variant="rgb=8 8 7" >
+      <Navbar className=" fixed-top" collapseOnSelect expand="lg" >
 
         <Container>
 
           <LinkContainer to="/">
             <Navbar.Brand >
-              <img src={logo} style={{ width: 30, height: 30 }} />
+              <img src={logo} style={{ width: 35, height: 35 }} />
             </Navbar.Brand>
           </LinkContainer>
 

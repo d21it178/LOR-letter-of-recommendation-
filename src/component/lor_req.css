@@ -1,0 +1,12 @@
+.conta {
+    position: relative;
+
+    bottom: 350px;
+    right: 320px;
+    left: 110px;
+    height: 450px;
+    width: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}

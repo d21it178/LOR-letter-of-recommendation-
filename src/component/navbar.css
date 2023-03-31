@@ -1,20 +1,22 @@
 
-
-.header {
+.nav {
     position: fixed;
-    height: 80px;
+    height: 55px;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1;
     transition: .3s ease-in;
+    
     overflow: hidden;
     background: #000;
-color: rgb(240, 12, 12);
-    
-}
-.header .me-auto :hover{
+   
     padding-bottom: 12px;
     border-bottom: 3px solid var(--secondary-color);
-    background: rgb(254, 255, 255);
+    background: rgb(111, 110, 110);
+/*     
+    background: #49606e ; */
+    /* background: rgb(123, 138, 148); */
+
 }
+
