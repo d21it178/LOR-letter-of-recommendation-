@@ -17,12 +17,12 @@ export default function Login() {
             <Card.Title style={{ color: 'black', left: '10px' }}>Login</Card.Title>
             <Form>
               <Form.Group className="" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label style={{ color: 'black'}}>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
               </Form.Group>
 
               <Form.Group className="mb-2" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label style={{ color: 'black'}}>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
 

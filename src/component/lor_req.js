@@ -1,18 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import { LinkContainer } from 'react-router-bootstrap';
 import Container from 'react-bootstrap/Container';
-import { Fade } from 'react-reveal';
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './lor_req.css'
+import Fade from 'react-reveal/Fade';
 
-export default function lor_req() {
+export default function Lor_req() {
+
+    const [inputList, setinputList] = useState([{ universityName: "" }]);
+
+    const handleinputchange = (e, index) => {
+        const { name, value } = e.target;
+        const list = [...inputList];
+        list[index][name] = value;
+        setinputList(list);
+    }
+
+  const  handleremove= index =>{
+    const list=[...inputList];
+    list.splice(index,1);
+    setinputList(list);
+
+  }
+
+    const handleaddclick = () => {
+  
+        setinputList([...inputList, { universityName: "" }]);
+    }
+
     return (
         <div >
+            <Fade right>
             <div className='conta'>
                 <Card style={{ height: '50rem', width: '30rem', left: '20%' }}>
 
@@ -97,37 +121,44 @@ export default function lor_req() {
                             <Col md><Form.Control type="text" /></Col>
                             <Col md><Button variant="secondary">Choose File</Button></Col>
                         </Row><br></br>
-
+                        
+                        <div>
                         <Form.Group className="mb-2" controlId="univ">
                             <Form.Label style={{ color: 'black' }}>University Preference List</Form.Label>
+                           
                             <Row className="g-7">
                                 <Col md></Col>
                                 <Col md></Col>
-                                <Col md><Button variant="secondary">Add</Button></Col>
+                                <Col md><Button variant="secondary" onClick={handleaddclick}>Add</Button></Col>
                                 <Col md></Col>
-                                <Col md><Button variant="secondary">Remove</Button></Col>
+                                <Col md><Button variant="secondary" onClick={()=> handleremove()}>Remove</Button></Col>
                                 <Col md></Col>
                                 <Col md></Col>
                             </Row>
                         </Form.Group>
 
-                        <Row className="g-6">
-                            <Col md></Col>
+                        <Row className="g-4">
+                          
                             <Col md><Form.Label style={{ color: 'black' }}>University Name</Form.Label></Col>
                             <Col md><Form.Label style={{ color: 'black' }}>Course Name</Form.Label></Col>
                             <Col md><Form.Label style={{ color: 'black' }}>Country Name</Form.Label></Col>
                             <Col md><Form.Label style={{ color: 'black' }}>Intake (Month-Year)</Form.Label></Col>
-                            <Col md></Col>
+                            
                         </Row>
 
-                        <Row className="g-6">
-                            <Col md></Col>
-                            <Col md><Form.Control type="text" /></Col>
-                            <Col md><Form.Control type="text" /></Col>
-                            <Col md><Form.Control type="text" /></Col>
-                            <Col md><Form.Control type="text" /></Col>
-                            <Col md></Col>
-                        </Row><br></br>
+
+                        {
+                            inputList.map((x, i) => {
+                                return(
+                        <Row className="g-4">
+                           
+                            <Col md><Form.Control type="text" placeholder="University Name" name="universityName" onChange={e=>handleinputchange(e,i)} /></Col>
+                            <Col md><Form.Control type="text" placeholder="Course Name"/></Col>
+                            <Col md><Form.Control type="text" placeholder="Country Name"/></Col>
+                            <Col md><Form.Control type="text" placeholder="Intake (Month-Year)"/></Col>
+                            
+                        </Row> ); })}<br></br>
+                        </div>
 
                         <Form.Group className="mb-2" controlId="faculty">
                             <Form.Label style={{ color: 'black' }}>Faculty Preference List</Form.Label>
@@ -142,24 +173,27 @@ export default function lor_req() {
                             </Row>
                         </Form.Group>
 
-                        <Row className="g-4">
+
+
+                        <Row className="g-3">
                             <Col md><Form.Label style={{ color: 'black' }}>Faculty Name</Form.Label></Col>
                             <Col md><Form.Label style={{ color: 'black' }}>Faculty Email</Form.Label></Col>
                             <Col md><Form.Label style={{ color: 'black' }}>Upload LOR</Form.Label></Col>
-                            <Col md></Col>
+                           
                         </Row>
 
-                        <Row className="g-2">
-                            {/* <Col md></Col> */}
+                        <Row className="g-3">
+                        
                             <Col md><Form.Control type="text" /></Col>
                             <Col md><Form.Control type="text" /></Col>
-                            <Col md><Button variant="secondary">Choose File</Button></Col><Col md></Col>
+                            <Col md><Button variant="secondary">Choose File</Button></Col>
                         </Row><br></br>
 
                         <Button className="mb-1" variant="primary" type="submit"> Submit</Button>
                     </Form>
                 </Card>
             </div>
+            </Fade>
         </div>
     )
 }
